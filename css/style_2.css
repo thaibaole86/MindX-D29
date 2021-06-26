@@ -346,7 +346,7 @@ text-decoration: underline;
     border-radius:4px;
 }
 
-.discount.price {
+.discount-price {
     font-family: Roboto;
     font-size:15px;
     line-height: 17.3px;
