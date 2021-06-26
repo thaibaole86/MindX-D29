@@ -354,6 +354,7 @@ text-decoration: underline;
 }
 
 .retail-price {
+    text-decoration: line-through;
     font-family: Roboto;
     font-size: 12px;
     line-height: 13.8px;
