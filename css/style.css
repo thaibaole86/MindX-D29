@@ -18,6 +18,11 @@ a {
     color: inherit;
 }
 
+body {
+    height: auto;
+    padding-bottom: 10px;
+}
+
 .topbar-font {
     font-size:12px;
 }
@@ -205,8 +210,9 @@ a {
 
 #main-body {
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     background: #ecf0f1;
+    padding-top: 15px;
 }
 
 .white-container{
@@ -691,3 +697,160 @@ text-decoration: underline;
     display: flex;
 }
 
+/* CSS FOR PRODUCT PAGE */
+
+.breadcum {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.breadcum ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.breadcum li {
+    justify-content: space-between;
+    margin-right: 10px;
+    
+}
+
+.breadcum li:after {
+    content: "\003e";
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+    padding-left:10px;
+}
+
+.breadcum a:any-link {
+    color:#1a9cb7;
+    font-size: 14px;
+}
+
+#product-page {
+    background-color: #eff0f5;
+    width: 100%;
+    height: auto;
+}
+
+.product-page-image {
+    width: 300px;
+}
+
+.product-detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-right: 0px;
+}
+
+.delivery-option {
+    background-color: #fafafa;
+    padding: 10px;
+}
+
+.delivery-slot {
+    display: flex;
+}
+
+.delivery-time {
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 20%);
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+}
+
+.product-information {
+    padding-top: 20px;
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-information-upper {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(196, 196, 196);
+    padding-bottom: 5px;
+}
+
+.product-information-middle {
+    padding-top:10px;
+    padding-bottom:10px;
+    border-bottom: solid 1px rgb(196, 196, 196);
+
+}
+
+.prp {
+    color: #ee4054;
+    font-size: 30px;
+}
+
+.product-size-fresh {
+    display: flex;
+    justify-items: right;
+    border-bottom: solid 1px rgb(196, 196, 196);
+}
+
+.fresh-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-right: solid 1px rgb(196, 196, 196);   
+}
+
+.product-cta-button {
+    margin-top: 10px;
+}
+
+.product-cta-button button {
+    padding: 0 24px;
+    border-radius: 2px;
+}
+
+.delivery-option li, .product-description-detail li {
+    list-style:disc
+}
+
+.product-description {
+    margin-top: 15px;
+    padding: 0px;
+    background-color: white;
+}
+
+.product-description-title {
+    width: 100%;
+    background-color: #fafafa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.product-description-detail {
+    width: 100%;
+    padding: 40px;
+}
+
+.same-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.same-product-section {
+    margin-top: 20px;
+    width: 100%;
+    background-color: white;
+    padding-bottom: 20px;
+}
