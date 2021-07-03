@@ -26,7 +26,7 @@
 
     <div class="navbar">
         <div class="container flex nav-font">
-            <img class="logo" src="/image/logo.png" width="127px" height="40px">
+            <a href="/index.html"> <img class="logo" src="/image/logo.png" width="127px" height="40px"></a> 
             <ul>
                 <li id="nav-menu-1"><a href="#">LazMall</a></li>
                 <li id="nav-menu-2"><a href="#">Taobao</a></li>
@@ -71,17 +71,33 @@
             <div class="product-information">
                 <div class="product-information-upper">
                     <img src="/image/tag.png" width="50px">
-                    <h4>Meiji Fresh Milk</h4>
-                    <p>Brand: Meiji | More Dairy & Chilled from Meiji</p>
+                    <h1>Meiji Fresh Milk</h1>
+                    <span>
+                        <img src="/image/star.png">
+                        <a class="price-link" href="#">15903 Ratings</a>
+                    </span>
+                    <p>Brand: <a href="#" class="price-link">Meiji</a> | <a href="#" class="price-link">More Dairy & Chilled from Meiji</a></p>
                 </div>
                 <div class="product-information-middle">
                     <div class=prp>$5.95</div>
-                    <p>$6.35 SAVE 40¢</p>
+                    <p><a class="retail-price">$6.35</a> SAVE 40¢</p>
                 </div>
                 <div class="product-size-fresh">
-                    <div class="fresh-box">Pack Size: 2L</div>
-                    <div class="fresh-box">Freshness: 6 Days</div>
-                    <div class="fresh-box">Country of origin: Thailand</div>
+                    <div class="fresh-box">
+                        <a class="attribute-title">Pack Size: </a> 
+                        </br>
+                        <a class="attribute-value">2L</a>
+                    </div>
+                    <div class="fresh-box">
+                        <a class="attribute-title">Freshness:</a> 
+                        </br>
+                        <a class="attribute-value">6 Days</a>
+                    </div>
+                    <div class="fresh-box">
+                        <a class="attribute-title">Country of origin:</a> 
+                        </br>
+                        <a class="attribute-value">Thailand</a>
+                    </div>
                 </div>
                 <div class="product-cta-button">
                 <button>ADD TO CART</button>
@@ -89,66 +105,68 @@
             </div>
 
             <div class="delivery-option">
+                <div class="delivery-option-text">
                 <p> <strong>Delivery Options</strong></p>
                 <p>Free delivery for orders over $60
                 <ul>
                     <li>Schedule Delivery - $5.99 (2 hour slot)</li>
                     <li>Saver Delivery - $3.99(6 hour slot)</li>
                 </ul>
+                </div>
                 </p>
                 <p><strong>Product Availability</strong></p>
                 <div class=delivery-slot>
                     <div class=delivery-time>
-                        <p>Today</p>
-                        <p>Unavailable</p>
+                        <p><a class="day-title">Today</a></p>
+                        <p><a class="day-status-unavailable">Unavailable</a></p>
                     </div>
                     <div class=delivery-time>
-                        <p>Wed 30 Jun</p>
-                        <p>Available</p>
+                        <p><a class="day-title">Fri 2 Jul</a></p>
+                        <p><a class="day-status">Available</a></p>
                     </div>
                     <div class=delivery-time>
-                        <p>Thu 1 Jul</p>
-                        <p>Available</p>
+                        <p><a class="day-title">Sat 3 Jul</a></p>
+                        <p><a class="day-status">Available</a></p>
                     </div>
                 </div>
                 <div class=delivery-slot>
                         <div class=delivery-time>
-                            <p>Today</p>
-                            <p>Unavailable</p>
+                            <p><a class="day-title">Sun 4 Jul</a></p>
+                            <p><a class="day-status">Available</a></p>
                         </div>
                         <div class=delivery-time>
-                            <p>Wed 30 Jun</p>
-                            <p>Available</p>
+                            <p><a class="day-title">Mon 5 Jul</a></p>
+                            <p><a class="day-status">Available</a></p>
                         </div>
                         <div class=delivery-time>
-                            <p>Thu 1 Jul</p>
-                            <p>Available</p>
+                            <p><a class="day-title">Tue 6 Jul</a></p>
+                            <p><a class="day-status">Available</a></p>
                         </div>
                 </div>
                 <div class=delivery-slot>
                         <div class=delivery-time>
-                            <p>Today</p>
-                            <p>Unavailable</p>
+                            <p><a class="day-title">Wed 7 Jul</a></p>
+                            <p><a class="day-status">Available</a></p>
                         </div>
                         <div class=delivery-time>
-                            <p>Wed 30 Jun</p>
-                            <p>Available</p>
+                            <p><a class="day-title">Thu 8 Jul</a></p>
+                            <p><a class="day-status">Available</a></p>
                         </div>
                         <div class=delivery-time>
-                            <p>Thu 1 Jul</p>
-                            <p>Available</p>
+                            <p><a class="day-title">Fri 9 Jul</a></p>
+                            <p><a class="day-status">Available</a></p>
                         </div>
                 </div>
                 <div class=sold-by>
                     <p>Sold by</p>
-                    <img src="/image/small-logo.png">
+                    <img src="/image/small-logo.png" width=100px>
                     </br>
                     <a href="#">Visit Store</a>
                 </div>
             </div>
         </div>
 
-        <div class="container product-description">
+        <div class="container white-container-no-padding">
             <div class="product-description-title">
                 <h4>Product details of Meiji Fresh Milk 2 L</h4>
             </div>
@@ -156,17 +174,152 @@
                 <ul>
                     <h3>Freshness Promise</h3>
                     <li>Delivered at least 6 Days before it expires (including delivery day), or you can get a refund.</li>
-                    <p>If you are not satisfied with this product in any way, please contact us and we'll give you a refund. Find out more about our freshness promise.
+                    <div class="notice-box">
+                        <p>If you are not satisfied with this product in any way, please <a href="#">contact us</a> and we'll give you a refund. Find out more about our <a href="#">freshness promise</a>.
                     </p>
-                    About Product
+                    </div>
+                    <h3>About Product</h3>
                     <li>Made from 100% fresh milk.Pasteurised and homogenised. Contains all the natural goodness of fresh cow’s milk with a superior taste</li>
                 </ul>
             </div>
+        </div>
 
+        <div class="container white-container-no-padding">
+            <div class="product-description-title">
+                <h4>Ratings & Reviews of Meiji Fresh Milk 2 L</h4>
+            </div>
+            <div class="review-section">
+                <div class="total-rating">
+                    <span><a class="real-rate">4.9</a><a class="total-rate">/5</a></span>
+                    <img src="/image/5star.PNG">
+                    <a>15906 Ratings</a>
+                </div>
+                <div class="real-review">
+                    <img src="/image/real-review.PNG">
+                </div>
+                
+            </div>
+            <div class ="review-filter">
+                <div class="product-review-title"><a>Product Reviews</a></div>
+                <div class="sort-box-review">Sort:Relevance</div>
+                <div class="filter-box-review">Filter:All star</div>
+            </div>
+            <div class="user-review">
+                <div class="user-review-content">
+                    <div class="user-review-content-1st-row">
+                        <img src="/image/user-info-review.PNG">
+                        <a class="review-date">3 weeks ago</a>
+                    </div>
+                    <p>repeated purchase. expiry date is long enough if you consume everyday.</p>
+                    <img src="/image/review-image.jpg" width="94px">
+                    <p>2L</p>
+                </div>
+            </div>
+
+            <div class="user-review">
+                <div class="user-review-content">
+                    <div class="user-review-content-1st-row">
+                        <img src="/image/user-info-review.PNG">
+                        <a class="review-date">3 weeks ago</a>
+                    </div>
+                    <p>repeated purchase. expiry date is long enough if you consume everyday.</p>
+                    <img src="/image/review-image.jpg" width="94px">
+                    <p>2L</p>
+                </div>
+            </div>
+
+            <div class="user-review">
+                <div class="user-review-content">
+                    <div class="user-review-content-1st-row">
+                        <img src="/image/user-info-review.PNG">
+                        <a class="review-date">3 weeks ago</a>
+                    </div>
+                    <p>repeated purchase. expiry date is long enough if you consume everyday.</p>
+                    <img src="/image/review-image.jpg" width="94px">
+                    <p>2L</p>
+                </div>
+            </div>
+
+            <div class="user-review">
+                <div class="user-review-content">
+                    <div class="user-review-content-1st-row">
+                        <img src="/image/user-info-review.PNG">
+                        <a class="review-date">3 weeks ago</a>
+                    </div>
+                    <p>repeated purchase. expiry date is long enough if you consume everyday.</p>
+                    <img src="/image/review-image.jpg" width="94px">
+                    <p>2L</p>
+                </div>
+            </div>
+
+            <div class="user-review">
+                <div class="user-review-content">
+                    <div class="user-review-content-1st-row">
+                        <img src="/image/user-info-review.PNG">
+                        <a class="review-date">3 weeks ago</a>
+                    </div>
+                    <p>repeated purchase. expiry date is long enough if you consume everyday.</p>
+                    <img src="/image/review-image.jpg" width="94px">
+                    <p>2L</p>
+                </div>
+            </div>
+
+            <div class="user-review">
+                <div class="user-review-content">
+                    <div class="user-review-content-1st-row">
+                        <img src="/image/user-info-review.PNG">
+                        <a class="review-date">3 weeks ago</a>
+                    </div>
+                    <p>repeated purchase. expiry date is long enough if you consume everyday.</p>
+                    <img src="/image/review-image.jpg" width="94px">
+                    <p>2L</p>
+                </div>
+            </div>
+
+            <div class="user-review">
+                <div class="user-review-content">
+                    <div class="user-review-content-1st-row">
+                        <img src="/image/user-info-review.PNG">
+                        <a class="review-date">3 weeks ago</a>
+                    </div>
+                    <p>repeated purchase. expiry date is long enough if you consume everyday.</p>
+                    <img src="/image/review-image.jpg" width="94px">
+                    <p>2L</p>
+                </div>
+            </div>
         </div>
 
         <div class="container same-product-section">
+            <div class= box-heading>
+                Same brand
+            </div>
             <div class="same-products">
+                <div class="product-box">
+                    <img class="product-image" src="/image/sku2.jpg" width="100px">
+                    <div class="product-description">
+                    <ul>
+                    <li class="product-title">Meiji Fresh Milk 2</li>
+                    <li class="product-attribute">2L</li>
+                    <li class="expiry-date">6D</li>
+                    <li class="discount-price">$5.95</li>
+                    <li class="retail-price">$6.35</li>
+                    </ul>
+                    </div>
+                    <button class="cta">Add to cart</button>
+                </div> 
+                <div class="product-box">
+                    <img class="product-image" src="/image/sku2.jpg" width="100px">
+                    <div class="product-description">
+                        <ul>
+                            <li class="product-title">Meiji Fresh Milk 2</li>
+                            <li class="product-attribute">2L</li>
+                            <li class="expiry-date">6D</li>
+                            <li class="discount-price">$5.95</li>
+                            <li class="retail-price">$6.35</li>
+                        </ul>
+                    </div>
+                    <button class="cta">Add to cart</button>
+                </div> 
                 <div class="product-box">
                     <img class="product-image" src="/image/sku2.jpg" width="100px">
                     <div class="product-description">
@@ -190,6 +343,79 @@
                     <li class="discount-price">$5.95</li>
                     <li class="retail-price">$6.35</li>
                     </ul>
+                    </div>
+                    <button class="cta">Add to cart</button>
+                </div> 
+                <div class="product-box">
+                    <img class="product-image" src="/image/sku2.jpg" width="100px">
+                    <div class="product-description">
+                    <ul>
+                    <li class="product-title">Meiji Fresh Milk 2</li>
+                    <li class="product-attribute">2L</li>
+                    <li class="expiry-date">6D</li>
+                    <li class="discount-price">$5.95</li>
+                    <li class="retail-price">$6.35</li>
+                    </ul>
+                    </div>
+                    <button class="cta">Add to cart</button>
+                </div> 
+                <div class="product-box">
+                    <img class="product-image" src="/image/sku2.jpg" width="100px">
+                    <div class="product-description">
+                    <ul>
+                    <li class="product-title">Meiji Fresh Milk 2</li>
+                    <li class="product-attribute">2L</li>
+                    <li class="expiry-date">6D</li>
+                    <li class="discount-price">$5.95</li>
+                    <li class="retail-price">$6.35</li>
+                    </ul>
+                    </div>
+                    <button class="cta">Add to cart</button>
+                </div> 
+                <div class="product-box">
+                    <img class="product-image" src="/image/sku2.jpg" width="100px">
+                    <div class="product-description">
+                    <ul>
+                    <li class="product-title">Meiji Fresh Milk 2</li>
+                    <li class="product-attribute">2L</li>
+                    <li class="expiry-date">6D</li>
+                    <li class="discount-price">$5.95</li>
+                    <li class="retail-price">$6.35</li>
+                    </ul>
+                    </div>
+                    <button class="cta">Add to cart</button>
+                </div> 
+            </div>
+        </div>
+
+        <div class="container same-product-section">
+            <div class= box-heading>
+                You may also like
+            </div>
+            <div class="same-products">
+                <div class="product-box">
+                    <img class="product-image" src="/image/sku2.jpg" width="100px">
+                    <div class="product-description">
+                    <ul>
+                    <li class="product-title">Meiji Fresh Milk 2</li>
+                    <li class="product-attribute">2L</li>
+                    <li class="expiry-date">6D</li>
+                    <li class="discount-price">$5.95</li>
+                    <li class="retail-price">$6.35</li>
+                    </ul>
+                    </div>
+                    <button class="cta">Add to cart</button>
+                </div> 
+                <div class="product-box">
+                    <img class="product-image" src="/image/sku2.jpg" width="100px">
+                    <div class="product-description">
+                        <ul>
+                            <li class="product-title">Meiji Fresh Milk 2</li>
+                            <li class="product-attribute">2L</li>
+                            <li class="expiry-date">6D</li>
+                            <li class="discount-price">$5.95</li>
+                            <li class="retail-price">$6.35</li>
+                        </ul>
                     </div>
                     <button class="cta">Add to cart</button>
                 </div> 
@@ -356,3 +582,4 @@
     </footer>
 </body>
 </html>
+
