@@ -6,31 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
- 
-     </script>
+            let stt = [];
+            let namesv = [];
+            let sttcount =0;
+
+        function newstudent(studentid, studentname) {
+            this.studentid = studentid;
+            this.studentname = studentname;
+        }
+
+        function Addsv() {
+            let newsv = document.getElementById('dulieu').value;
+            sttcount = sttcount + 1;
+            stt.push(sttcount);
+            namesv.push(newsv);
+            console.log(stt);
+            console.log(namesv);
+            document.getElementById('student-table').innerHTML += "<tr><td>" + sttcount + "</td><td>" + newsv +"</td></tr>"
+            document.getElementById('soluongsv').innerHTML = sttcount;
+            return namesv;
+            }
+
+        function Sortsv() {
+            document.getElementById('student-table').innerHTML = "<tr><th>STT</th><th>Tên SV</th></tr>";
+            let tickyet = document.getElementById('tudong').checked;
+            if (tickyet = true) {
+                namesv.sort()
+                for (i in namesv) {
+                    document.getElementById('student-table').innerHTML += "<tr><td>" + stt[i] + "</td><td>" + namesv[i] +"</td></tr>"
+                }
+                }
+            }
+        
+        function Xoasv() {
+            
+            result = confirm("Bạn có chắn chắn muốn xoá?")
+            if (result) {
+                document.getElementById('student-table').innerHTML = "<tr><th>STT</th><th>Tên SV</th></tr>";
+            }
+            while (stt.length > 0) {
+                stt.pop();
+            }
+
+            while (namesv.length > 0) {
+                namesv.pop();
+            }
+
+            sttcount = 0;
+            document.getElementById('soluongsv').innerHTML = sttcount;
+            return sttcount;
+        }
+     
+        function Sapxepsv() {
+            namesv.sort()
+            document.getElementById('student-table').innerHTML = "<tr><th>STT</th><th>Tên SV</th></tr>";
+            for (i in namesv) {
+                    document.getElementById('student-table').innerHTML += "<tr><td>" + stt[i] + "</td><td>" + namesv[i] +"</td></tr>"
+                }
+        }
+    
+        function Timsv() {
+            timtensv = document.getElementById('dulieu').value;
+            let sttsvcantim;
+            sttsvcantim = namesv.indexOf(timtensv);
+            console.log(stt[sttsvcantim]);
+            document.getElementById('student-table').innerHTML = "<tr><th>STT</th><th>Tên SV</th></tr>";
+            document.getElementById('student-table').innerHTML += "<tr><td>" + stt[sttsvcantim] + "</td><td>" + timtensv +"</td></tr>"
+
+        }
+        
+        function Suasv() {
+            timtensv = document.getElementById('dulieu').value;
+            let sttsvcantim;
+            sttsvcantim = namesv.indexOf(timtensv);
+            let tenmoi = prompt('Vui long nhap ten moi');
+            if (tenmoi === null) {
+                return;
+            }
+            namesv[sttsvcantim] = tenmoi;
+            
+            document.getElementById('student-table').innerHTML = "<tr><th>STT</th><th>Tên SV</th></tr>";
+            for (i in namesv) {
+                    document.getElementById('student-table').innerHTML += "<tr><td>" + stt[i] + "</td><td>" + namesv[i] +"</td></tr>"
+                }
+        }
+    
+    </script>
+     <style>
+         #student-table {
+            margin-top: 15px; 
+            border: 1px solid black;
+            border-collapse: collapse;
+         }
+
+         th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+     </style>
 </head>
 <body>
 <h1>Danh sách SV môn HTML, CSS, JavaScript</h1>
 <label for="dulieu">Nhập họ tên SV: </label>
 <input id="dulieu" name="dulieu">
-<button>Thêm</button>
-<button>Sửa</button>
-<button>Xoá</button>
-<button>Tìm kiếm</button>
-<button>Sắp xếp</button>
-<input type="checkbox" id="tudong" name="tudong">
+<button onclick="Addsv()">Thêm</button>
+<button onclick="Suasv()">Sửa</button>
+<button onclick="Xoasv()">Xoá</button>
+<button onclick="Timsv()">Tìm kiếm</button>
+<button onclick="Sapxepsv()">Sắp xếp</button>
+<input type="checkbox" id="tudong" name="tudong" onclick="Sortsv()">
 <label for="tudong">Tự động</label>
-<table border="1px" solid> 
-    <thead>
+<h2>Danh sách gồm có <span id="soluongsv">0</span> SV</h2>
+<table id ="student-table"> 
         <tr>
-            <td>STT</td>
-            <td>Tên SV</td>
+            <th>STT</th>
+            <th>Tên SV</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Bảo</td>
-        </tr>
-    </thead>
 </table>
 
 </body>
