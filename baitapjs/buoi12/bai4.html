@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #student-table {
+           margin-top: 15px; 
+           border: 1px solid black;
+           border-collapse: collapse;
+        }
+
+        th, td {
+           padding: 10px;
+           text-align: left;
+       }
+
+       th {
+           background-color: black;
+           color: white;
+           border: 1px white solid;
+       }
+
+       td {
+           border: 1px solid black;
+       }
+    </style>
+    
+    <script>
+        
+
+        function Addsv() {
+            
+            function sinhvien(mssv, tensv, diemtoan, diemhoa, diemly, diemtrungbinh, xeploai) {
+                this.mssv = mssv;
+                this.tensv = tensv;
+                this.diemtoan = diemtoan;
+                this.diemhoa = diemhoa;
+                this.diemly = diemly;
+                this.diemtrungbinh = ((this.diemtoan + this.diemhoa + this.diemly) / 3);
+                this.xeploai = function () {
+                                if (this.diemtrungbinh >= 5) {
+                                    return "Dat";
+                                }
+                                else {
+                                    return 'Thi Lai';
+                                }
+                            }           
+                
+                }
+            
+            
+            let svid = parseInt(document.getElementById("sv-id").value);
+            let svname = document.getElementById("sv-name").value;
+            let scoremath = parseInt(document.getElementById("score-math").value);
+            let scorephy = parseInt(document.getElementById("score-phy").value);
+            let scorechem = parseInt(document.getElementById("score-chem").value);
+
+            let svmoi = new sinhvien(svid, svname, scoremath, scorephy, scorechem );  
+
+            document.getElementById("diemtb").innerHTML = parseFloat(svmoi.diemtrungbinh).toFixed(2);
+            document.getElementById("xeploai").innerHTML = svmoi.xeploai();
+            console.log(svmoi)  
+
+            document.getElementById('student-table').innerHTML += "<tr><td>" + svmoi.mssv + "</td><td>" + svmoi.tensv + "</td><td>" + svmoi.diemtoan + "</td><td>" + svmoi.diemly + "</td><td>" + svmoi.diemhoa + "</td><td>" + parseFloat(svmoi.diemtrungbinh).toFixed(2) + "</td><td>" + svmoi.xeploai() + "</td></tr>"
+        }
+    </script>
+</head>
+<body>
+    <h1>Thong tin sinh vien:</h1>
+    <label for="sv-id">Ma Sinh Vien</label>
+    <br>
+    <input id="sv-id" name="sv-id">
+    <br>
+    <label for="sv-name">Ho Ten</label>
+    <br>
+    <input id="sv-name" name="sv-name">
+    <br>
+    <label for="score-math">Diem Toan</label>
+    <br>
+    <input id="score-math" name="score-math" type="number">
+    <br>
+    <label for="score-phy">Diem Ly</label>
+    <br>
+    <input id="score-phy" name="score-phy" type="number">
+    <br>
+    <label for="score-chem">Diem Hoa</label>
+    <br>
+    <input id="score-chem" name="score-chem" type="number">
+    <br>    <br>
+    <button onclick="Addsv()">Them Sinh Vien</button>
+    <h2>Diem Trung Binh: <span id="diemtb"></span> </h2>
+    <h2>Xep Loai: <span id="xeploai"></span> </h2>
+    <br>
+    <h2>Danh sách SV</h2>
+        <table id ="student-table"> 
+        <tr>
+            <th>MSSV</th>
+            <th>Ho Ten SV</th>
+            <th>Diem Toan</th>
+            <th>Diem Ly</th>
+            <th>Diem Hoa</th>
+            <th>Diem Trung Binh</th>
+            <th>Xep Loai</th>   
+        </tr>
+</table>
+</body>
+</html>

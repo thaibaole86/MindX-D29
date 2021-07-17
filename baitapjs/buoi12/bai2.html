@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate() {
+            let x1 = document.getElementById("x1").value;
+            let y1 = document.getElementById("y1").value;
+            let x2 = document.getElementById("x2").value;
+            let y2 = document.getElementById("y2").value;
+
+            let phanso1 = {x: x1, y: y1};
+            let phanso2 = {x: x2, y: y2};
+
+            let tkhoangcach = Math.sqrt((phanso1.x-phanso2.x)*(phanso1.x-phanso2.x) + (phanso1.y-phanso2.y)*(phanso1.y-phanso2.y));
+
+            document.getElementById('khoangcach').innerHTML = tkhoangcach;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Tinh khoang cach cua 2 diem co toa do (x1,y1) va (x2,y2)</h1>
+    <label for="x1">X1: </label>
+    <br>
+    <input id="x1" name="x1">
+    <br>
+    <label for="y1">Y1: </label>
+    <br>
+    <input id="y1" name="y1"> 
+    <br>
+    <br>
+    <label for="x2">X2: </label>
+    <br>
+    <input id="x2" name="x2">
+    <br>
+    <label for="y2">Y2: </label>
+    <br>
+    <input id="y2" name="y2"> 
+    <br>
+    <button onclick="calculate()">Tinh Toan</button>
+    <div>
+        <h2>Ket qua:</h2>
+        <p>Khoang cach giua 2 diem la: <span id="khoangcach"></span></p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 100px;
+            margin: 10px;
+           
+        }
+    </style>
+    <script>
+        function calculate() {
+            let a1 = document.getElementById("tuso1").value;
+            let b1 = document.getElementById("mauso1").value;
+            let a2 = document.getElementById("tuso2").value;
+            let b2 = document.getElementById("mauso2").value;
+
+            let phanso1 = {tuso: a1, mauso: b1};
+            let phanso2 = {tuso: a2, mauso: b2};
+
+            let ttong = (phanso1.tuso / phanso1.mauso) + (phanso2.tuso / phanso2.mauso);
+            let thieu = (phanso1.tuso / phanso1.mauso) - (phanso2.tuso / phanso2.mauso);
+            let ttich = (phanso1.tuso / phanso1.mauso) * (phanso2.tuso / phanso2.mauso);
+            let tthuong = (phanso1.tuso / phanso1.mauso) / (phanso2.tuso / phanso2.mauso);
+
+            document.getElementById('tong').innerHTML = ttong;
+            document.getElementById('hieu').innerHTML = thieu;
+            document.getElementById('tich').innerHTML = ttich;
+            document.getElementById('thuong').innerHTML = tthuong;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Tinh tong, hieu, tich va thuong cua 2 phan so</h1>
+    <label for="tuso1">Tu so cua phan so thu 1: </label>
+    <br>
+    <input id="tuso1" name="tuso1">
+    <br>
+    <label for="mausau1">Mau so cua phan so thu 1: </label>
+    <br>
+    <input id="mauso1" name="mauso1"> 
+    <br>
+    <br>
+    <label for="tuso2">Tu so cua phan so thu 2: </label>
+    <br>
+    <input id="tuso2" name="tuso2">
+    <br>
+    <label for="mausau2">Mau so cua phan so thu 2: </label>
+    <br>
+    <input id="mauso2" name="mauso2"> 
+    <br>
+    <button onclick="calculate()">Tinh Toan</button>
+    <div>
+        <h2>Ket qua:</h2>
+        <p>Tong la: <span id="tong"></span></p>
+        <p>Hieu la: <span id="hieu"></span></p>
+        <p>Tich la: <span id="tich"></span></p>
+        <p>Thuong la: <span id="thuong"></span></p>
+    </div>
+</body>
+</html>

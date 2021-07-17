@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate() {
+            let Ax = document.getElementById("x1").value;
+            let Bx = document.getElementById("x2").value;
+            let Cx = document.getElementById("x3").value;
+            let Ay = document.getElementById("y1").value;
+            let By = document.getElementById("y2").value;
+            let Cy = document.getElementById("y3").value;
+            
+            let A = {x: Ax, y: Ay};
+            let B = {x: Bx, y: By};
+            let C = {x: Cx, y: Cy};
+
+            let AB = Math.sqrt((A.x-B.x)*(A.x-B.x) + (A.y-B.y)*(A.y-B.y));
+            let AC = Math.sqrt((A.x-C.x)*(A.x-C.x) + (A.y-C.y)*(A.y-C.y));
+            let BC = Math.sqrt((B.x-C.x)*(B.x-C.x) + (B.y-C.y)*(B.y-C.y));
+
+            let PP= AB + AC + BC;
+
+            let P = PP / 2;
+
+            let S = Math.sqrt(P*(P-AB)*(P-AC)*(P-BC));
+
+            document.getElementById('chuvi').innerHTML = PP;
+            document.getElementById('dientich').innerHTML = S;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Tinh chu vi va dien tich cua tam giac co tao do 3 dinh A(x1,y1), B(x2,y2), C(x3,y3) </h1>
+    <label>Toa do 1: </label>
+    <br>
+    X1: <input id="x1" name="x1">
+    Y1 <input id="y1" name="y1">
+    <br>
+    <label>Toa do 2: </label>
+    <br>
+    X2: <input id="x2" name="x2">
+    Y2 <input id="y2" name="y2">
+    <br>
+    <label>Toa do 3: </label>
+    <br>
+    X3: <input id="x3" name="x3">
+    Y3 <input id="y3" name="y3">
+    <br>
+    <button onclick="calculate()">Tinh Toan</button>
+    <div>
+        <h2>Ket qua:</h2>
+        <p>Chu vi tam giac: <span id="chuvi"></span></p>
+        <p>Dien tich tam giac: <span id="dientich"></span></p>
+</body>
+</html>
