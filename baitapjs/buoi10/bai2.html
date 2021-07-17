@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1> Lua chon 1: Nhap ban kinh. Tinh chu vi va dien tich hinh tron</h1>
+<label for="bankinh">Nhap ban kinh: </label>
+<input id="bankinh" name="bankinh">
+<button onclick="calculateb1()">Tinh toan</button>
+<div>
+    <p>Chu vi hinh tron la: <span id="chuviht"></span></p>
+    <p>Dien tich hinh tron la: <span id="dientichht"></span></p>
+</div>
+<br>
+<h1> Lua chon 2: Nhap do dai 2 canh. Tinh chu vi va dien tich hinh chu nhat</h1>
+<label for="chieudai">Nhap chieu dai: </label>
+<input id="chieudai" name="chieudai">
+<label for="chieurong">Nhap chieu rong: </label>
+<input id="chieurong" name="chieurong">
+<button onclick="calculateb2()">Tinh toan</button>
+<div>
+    <p>Chu vi hinh chu nhat la: <span id="chuvihcn"></span></p>
+    <p>Dien tich hinh chu nhat la: <span id="dientichhcn"></span></p>
+</div>
+<br>
+<h1> Lua chon 3: Nhap do dai canh. Tinh chu vi va dien tich hinh vuong</h1>
+<label for="canhhv">Nhap do dai canh: </label>
+<input id="canhhv" name="canhhv">
+<button onclick="calculateb3()">Tinh toan</button>
+<div>
+    <p>Chu vi hinh vuong la: <span id="chuvihv"></span></p>
+    <p>Dien tich hinh vuong la: <span id="dientichhv"></span></p>
+</div>
+<script>
+    function calculateb1() {
+        let chuvi, dientich;
+        let bk = parseInt(document.getElementById('bankinh').value);
+        
+        chuvi = 2 * bk * Math.PI;
+        dientich = bk * bk * Math.PI;
+
+        document.getElementById("chuviht").innerHTML = chuvi;
+        document.getElementById("dientichht").innerHTML = dientich;
+    }
+    
+    function calculateb2() {
+        let cd = parseInt(document.getElementById('chieudai').value);
+        let cr = parseInt(document.getElementById('chieurong').value);
+        let chuvihcn, dientichhcn;
+        chuvihcn = 2 * (cd + cr);
+        dientichhcn = cd * cr;
+        
+        document.getElementById("chuvihcn").innerHTML = chuvihcn;
+        document.getElementById("dientichhcn").innerHTML = dientichhcn;
+    }
+
+    function calculateb3() {
+        let canhhinhvuong = document.getElementById('canhhv').value;
+        let chuvihinhvuong, dientichhinhvuong;
+        chuvihinhvuong = canhhinhvuong * 4;
+        dientichhinhvuong = canhhinhvuong * canhhinhvuong;
+        document.getElementById("chuvihv").innerHTML = chuvihinhvuong;
+        document.getElementById("dientichhv").innerHTML = dientichhinhvuong;
+    }
+</script>
+</body>
+</html>

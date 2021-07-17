@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+ 
+        
+        function timuocchungln() {
+            let a = document.getElementById('soa').value;
+            let b = document.getElementById('sob').value;
+            let uclnresult;
+            while (a*b !=0) {
+                if (a > b) {
+                a = a % b;
+            }
+
+            else {
+                b = b % a;
+            }
+            }
+        uclnresult =a+b ;
+        document.getElementById('ucln').innerHTML = uclnresult;
+        }
+        
+        function timboichungnn() {
+            let a = parseInt(document.getElementById('soa').value);
+            let b = parseInt(document.getElementById('sob').value);
+            let bcnn;
+            let tichab = a * b;
+
+            if (a > b) {
+                maxab = a;
+            }
+            if (a < b) {
+                maxab = b;
+            }
+
+            for (i = maxab; i <= tichab; i = i + 1 ) {
+                if ((i % a == 0) && (i % b == 0)) {
+                    bcnn = i;
+                    break;
+                }
+            }
+            document.getElementById('bcnnkq').innerHTML = bcnn;
+    }
+        
+
+    </script>
+
+
+</head>
+<body>
+<h1> Nhap vao 2 so nguyen duong a va b. Tim uoc chung lon nhat va boi chung nho nhat cua 2 so do.</h1>
+<label for="soa">Nhap a: </label>
+<input id="soa" name="soa">
+<label for="soa">Nhap b: </label>
+<input id="sob" name="sob">
+<button onclick="timuocchungln()">Tim UCLN</button>
+<button onclick="timboichungnn()">Tim BCNN</button>
+<div>
+    <p>Uoc chung lon nhat: <span id="ucln"></span></p>
+    <p>Boi chung nho nhat: <span id="bcnnkq"></span></p>
+</body>
+</html>

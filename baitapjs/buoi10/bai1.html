@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1> Tinh tong, hieu, tich va thuong cua 2 so a va b</h1>
+<label for="soa">Nhap so a: </label>
+<input id="soa" name="soa">
+<label for="soa">Nhap so b: </label>
+<input id="sob" name="sob">
+<button onclick="calculate()">Tinh toan</button>
+<div>
+    <p>Tong la: <span id="kqtong"></span></p>
+    <p>Hieu la: <span id="kqhieu"></span></p>
+    <p>Tich la: <span id="kqtich"></span></p>
+    <p>Thuong la: <span id="kqthuong"></span></p>
+</div>
+
+<script>
+    function calculate() {
+        let tong, hieu, tich, thuong;
+        let sa = parseInt(document.getElementById('soa').value);
+        let sb = parseInt(document.getElementById('sob').value);
+        tong = sa + sb;
+        hieu = sa - sb;
+        tich = sa * sb;
+        thuong = sa / sb;
+        console.log(tong);
+        document.getElementById("kqtong").innerHTML = tong;
+        document.getElementById("kqhieu").innerHTML = hieu;
+        document.getElementById("kqtich").innerHTML = tich;
+        document.getElementById("kqthuong").innerHTML = thuong;
+    }
+
+</script>
+</body>
+</html>

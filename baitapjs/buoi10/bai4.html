@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ktsonguyento(n) {
+            let kt = 1; // kt = 1 thi so n la so nguyen to
+            let cb2n = parseInt(Math.round(Math.sqrt(n)));
+
+            for (i = 2; i <= cb2n; i++) {
+                if ((n % i == 0) && (n > 2)) {
+                    kt = 0 //kt = 0 thi so n ko phai la so nguyen to
+                }
+            }
+            return kt;
+        }
+        
+        function kiemtra() {
+            let n = parseInt(document.getElementById('son').value);
+            let result = [];
+            
+            for (j = 2; j < n; j++) {
+                    if ( ktsonguyento(j) == 1 ) {
+                        result.push(j);
+                    }
+
+                }                                                                                                                                                                                                                                                                                                                                                                       
+            document.getElementById('ketqua').innerHTML = result;
+        }
+
+    </script>
+
+
+</head>
+<body>
+<h1> Nhap vao so nguyen duong n. Xuat ra man hinh cac so nguyen to khong vuot qua n.</h1>
+<label for="son">Nhap n: </label>
+<input id="son" name="son">
+<button onclick="kiemtra()">Kiem tra</button>
+<div>
+    <p>Ket qua: <span id="ketqua"></span></p>
+</body>
+</html>

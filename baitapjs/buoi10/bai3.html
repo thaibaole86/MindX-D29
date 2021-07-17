@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function kiemtra(){
+            let socancheck = document.getElementById('son').value;
+            let result;
+            if (socancheck < 2) {
+                result = 'N khong phai la so nguyen to.';
+            }
+
+            if (socancheck == 2) {
+                result = 'N la so nguyen to.';
+            }
+
+            else {
+                for (i = 2; i <= ( socancheck - 1 ); (i = i + 1)) {
+                    if (socancheck % i == 0) {
+                        result = 'N khong phai la so nguyen to';
+                        break;
+                    }
+                    else {
+                        result = 'N la so nguyen to';
+                    }
+                }
+             }
+
+             document.getElementById('ketqua').innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+<h1> Nhap vao so nguyen duong n. Cho biet n co phai so nguyen to khong?</h1>
+<label for="son">Nhap n: </label>
+<input id="son" name="son">
+<button onclick="kiemtra()">Kiem tra</button>
+<div>
+    <p>Ket qua: <span id="ketqua"></span></p>
+</body>
+</html>
