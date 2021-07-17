@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Nhap 2 so nguyen duong a va b. Xuat ra man hinh uoc chung lon nhat cua a va b
+        function timuocchung() {
+            let a = parseInt(prompt("Vui long nhap so nguyen duong a"));
+            let b = parseInt(prompt("Vui long nhap so nguyen duong b"));
+            while (a*b !=0) {
+                if (a > b) {
+                a = a % b;
+            }
+
+            else {
+                b = b % a;
+            }
+            }
+        return a+b ;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

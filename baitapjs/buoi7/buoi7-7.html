@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pwshow() {
+            document.getElementById('password').type = "text";
+        }
+
+        function pwhide() {
+            document.getElementById('password').type = "password";
+        }
+
+        function pwcheck() {
+            let user = document.getElementById('username').value;
+            let pww = document.getElementById('password').value;
+
+            if ((user == "admin") && (pww == "123456")) {
+                alert('Dang Nhap thanh cong');
+            }
+            else {
+                alert('Dang nhap khong thanh cong');
+            }   
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Ket qua bai tap 7</h1>
+    <label for="username">Vui Long Nhap Ho & Ten</label>
+    <br>
+    <input id="username" name="username">
+    <br>
+    <input onmouseover="pwshow()" onmouseout="pwhide()" type="password" id="password" name="password">
+    <button onclick="pwcheck()">Dang Nhap</button>
+</body>
+</html>

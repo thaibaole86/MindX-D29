@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Tim cac so nguyen duong co 3 chu so sao cho tong binh phuong cua 3 chu so do bang 25
+        function timso() {
+            let result =[];
+
+            for (i = 100; i <= 999; i++) {
+                let so1 = parseInt(Math.floor(i / 100));
+                let so2 = parseInt(Math.floor((i % 100)/10));
+                let so3 = parseInt(Math.floor(i % 10));
+                let tongbp = so1*so1 + so2*so2 + so3*so3;
+                if ( tongbp === 25 ) {
+                    result.push(i);
+                }
+            }
+            return result;
+           
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

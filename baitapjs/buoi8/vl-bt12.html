@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // So hoan thien
+        function sohoanthien(n) {
+            let uocso = [];
+            let tonguoc = 0;
+
+            for (i = 1; i < n; i++) {
+                if ( n % i == 0) {
+                    uocso.push(i)
+                    tonguoc = tonguoc + i;
+                }
+            }
+
+            if (tonguoc == n) {
+                console.log('Day la so hoan thien');
+            }
+            else {
+                console.log('Day ko la so hoan thien');
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

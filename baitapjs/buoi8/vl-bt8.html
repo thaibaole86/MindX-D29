@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Nhap 2 so nguyen duong a va b. Xuat ra man hinh uoc chung lon nhat cua a va b
+        function giais1() {
+            let n = parseInt(prompt("Vui long nhap so nguyen duong a"));
+            let s1 = 0;
+            let s2 = 0;
+            let s3 = 0;
+
+            for (i = 1; i <= n; i = i + 1) {
+                s1 = (i*i + s1);
+                s2 = (i/i + s2);
+                s3 = (i/(i+1) +s3);
+            }
+            console.log("Dap an S1 =", s1);
+            console.log("Dap an S2 =", s2);
+            console.log("Dap an S3 =", s3);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

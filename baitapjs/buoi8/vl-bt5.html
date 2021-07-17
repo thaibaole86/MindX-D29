@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Nhap n - Cho biet n co phai so nguyen to khong
+        let n = parseInt(prompt("Vui long nhap so nguyen duong n"));
+        let result;
+        if (n < 2) {
+            result = 'N khong phai la so nguyen to.';
+        }
+        else {
+            for (i = 2; i<= ( n - 1 ); (i = i + 1)) {
+                if (n % i == 0) {
+                    result = 'N khong phai la so nguyen to';
+                    break;
+                }
+                else {
+                    result = 'N la so nguyen to';
+                }
+            
+            }
+
+        }
+        console.log(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

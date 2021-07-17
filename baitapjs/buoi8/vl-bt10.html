@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Nhap n, xuat ra m la so dao nguoc cua n. Xet xem m co phai la so doi xung cua n.
+        function timdoixung() {
+            let n = parseInt(prompt("Vui long nhap so nguyen duong a"));
+            let m = 0;
+            let nbandau = n;
+            
+            while ( n!= 0) {
+                som = n % 10;
+                m = m * 10 + som;
+                n = parseInt(n / 10)
+            }
+
+            if (m == nbandau) {
+                console.log('So dao nguoc la: ' + m + ' .Day la so doi xung');
+            }
+            else {
+                console.log('So dao nguoc la: ' + m + ' .Day khong phai la so doi xung');
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

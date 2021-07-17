@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ktsonguyento(n) {
+            let kt = 1; // kt = 1 thi so n la so nguyen to
+            let cb2n = parseInt(Math.round(Math.sqrt(n)));
+
+            for (i = 2; i <= cb2n; i++) {
+                if ((n % i == 0) && (n > 2)) {
+                    kt = 0 //kt = 0 thi so n ko phai la so nguyen to
+                }
+            }
+            return kt;
+        }
+        
+        let mangso = [];
+        let filterso = [];
+
+        function themso() {
+            
+            let newso = document.getElementById('dulieu').value ;
+            mangso.push(newso);
+            
+            if (ktsonguyento(newso) == 1) {
+                filterso.push(newso);
+            }
+
+            for (let i = 0; i < mangso.length; i++) {
+
+                if ( mangso[i] < 0) {
+                    document.getElementById('nhanxet1').innerHTML = '<div>' + '<b>Nhan xet 1 </b>: Mang co so am' + '<div>';
+                }
+
+                if (mangso.every(ktsonguyento) == 1) {
+                    document.getElementById('nhanxet2').innerHTML = "<b> Nhan xet 2 </b>: Mang chi bao gom so nguyen to";
+                }
+                if (mangso.every(ktsonguyento) == 0) {
+                    document.getElementById('nhanxet2').innerHTML = "<b> Nhan xet 2 </b>: Mang khong chi bao gom so nguyen to";
+                }
+                
+                document.getElementById('ketqua').innerHTML = '<div>' + '<b> Mang so bao gom </b>: ' + mangso + '<div>';
+                
+                document.getElementById('ketquasonguyento').innerHTML = '<div>' + '<b> Cac so nguyen to la </b>: ' + filterso + '<div>';
+                
+                console.log(mangso);
+            }
+            return mangso;
+        }
+
+
+
+
+     </script>
+</head>
+<body>
+<h1>Bai tap co ban</h1>
+<input id="dulieu" name="dulieu" type="number">
+<button id="submit" name="submit" onclick="themso()">Submit</button>
+<h1>Ket qua mang la</h1>
+<span id="nhanxet1"></span>
+<span id="nhanxet2"></span>
+<span id="ketqua"></span>
+<span id="ketquasonguyento"></span>
+
+
+</body>
+</html>
